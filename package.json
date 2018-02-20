@@ -1,0 +1,25 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "command line hangman game",
+  "main": "Letter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guitarlanguage/node-hangman-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Tom LaChance",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guitarlanguage/node-hangman-cli/issues"
+  },
+  "homepage": "https://github.com/guitarlanguage/node-hangman-cli#readme",
+  "dependencies": {
+    "inquirer": "^5.1.0"
+  }
+}
