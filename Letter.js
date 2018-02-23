@@ -24,6 +24,7 @@ function Letter(letter) {
         if (this.letter === character) {
             this.guessed = true;
             return;
+            
         }   else {
                 console.log(`try a different letter`);
                 wrongGuesses.push(character);
@@ -32,13 +33,13 @@ function Letter(letter) {
     };
 }
 //testing
-var j = new Letter("j");
-j.checkIt("j");
-j.toString();
-//
-var l = new Letter(l);
-l.checkIt("l");
-l.toString();
+// var j = new Letter("j");
+// j.checkIt("j");
+// j.toString();
+// //
+// var l = new Letter(l);
+// l.checkIt("l");
+// l.toString();
 
 //export the module
 module.exports = Letter;

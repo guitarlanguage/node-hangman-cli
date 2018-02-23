@@ -1,31 +1,27 @@
+// jshint esnext: true
 // * **Word.js**: Contains a constructor, Word that depends on the Letter
 // constructor.
 var Letter = require("./Letter.js");
-//This is used to create an object representing the current
-// word the user is attempting to guess. That means the constructor should
-// define:
-//An array of `new` Letter objects representing the letters of the underlying word
-// * A function that returns a string representing the word.This should call the
-// function on each letter object (the first function defined in `Letter.js`)
-// that displays the character or an underscore and concatenate those together.
-//
-// * A function that takes a character as an argument and calls the guess
-// function on each letter object (the second function defined in `Letter.js`)
-// creating Constructor, Word
+
 var Word = function(word) {
 
     this.word = word;
     //An array of `new` Letter objects representing the letters of the underlying word
     // this.words will hold all of our word objects
     this.letters = [];
-    this.addLetters= function(chara, guessed) {
-      this.theGuess.push(new Letter());
-    };
+    //put those word letters into the this.letters array
+    for (var w = 0; w < letters.length; w++) {
+        var letter = new Letter(word[w]);
+        this.letters.push(letter);
+    }
 
-// * A function that takes a character as an argument and calls the guess
-// function on each letter object (the second function defined in `Letter.js`)
-    this.chug = function(letter) {
-        this.checkIt;
+//A function that returns a string representing the word. This should call the
+// function on each letter object (the first function defined in `Letter.js`)that
+// displays the character or an underscore and concatenate those together.
+    this.returnAString = function() {
+    //A function that returns a string representing the word.
+    var theWord = "";
+    this.checkIt();
     };
 
 
