@@ -8,27 +8,22 @@ function Letter(letter) {
     this.letter = letter;
     //A boolean value that stores whether that letter has been guessed yet
     this.guessed = false;
-    var isLetterRegExp = /^[A-Za-z]+$/;
 
-    this.toString = function(character) {
-    //     //checking whether the guess was a letter or not
-        // var isLetterRegExp = /^[A-Za-z]+$/;
-        if(character.value.match(isLetterRegExp)) {
-            //indicates that the input was a letter
+    this.toString = function(letter) {
+
+        if(this.guessed === true) {
             return this.letter;
-            //states this is unreachable
-            // console.log(`Your Guess: ${this.letter[i]}`);
+
         } else {
             console.log(`_`);
         }
     };
-    //* A function that takes a character as an argument and checks it against
-    //the underlying character, updating the stored boolean value to true if it was guessed correctly
+    //A function that takes a character as an argument and checks it against the
+    //underlying character, updating the stored boolean value to true if it was guessed correctly
     this.checkIt = function(character) {
         if (this.letter === character) {
             this.guessed = true;
-            // return true;
-            console.log(`Correct: ${this.letter}`);
+            return;
         }   else {
                 console.log(`try a different letter`);
                 wrongGuesses.push(character);
@@ -36,10 +31,14 @@ function Letter(letter) {
         }
     };
 }
-
+//testing
 var j = new Letter("j");
+j.checkIt("j");
+j.toString();
+//
+var l = new Letter(l);
+l.checkIt("l");
+l.toString();
 
-j.toString(j);
-j.checkIt(j);
-
+//export the module
 module.exports = Letter;
