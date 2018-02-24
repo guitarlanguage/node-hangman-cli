@@ -25,15 +25,10 @@ var Word = function(word) {
     // A function that takes a character as an argument and calls the guess
     //function on each letter object (the second function defined in Letter.js
     this.callCheckItFunctionOnEach = function(character) {
-        for (var j = 0; j < letterObjects.length; j++){
+        for (var j = 0; j < letterObjects.length; j++) {
             character.checkIt(letterObjects[j]);
         }
     };
-
-
-var randomWord = words[Math.floor(words.length * Math.random())];
-console.log(randomWord);
-return randomWord;
 
 };
 
@@ -41,6 +36,19 @@ var words = ["carbon", "hydrogen", "helium", "gallium", "zinc", "argon", "tin",
 "potassium", "sodium", "chlorine", "sulfur", "cobalt", "zirconium", "barium",
 "lithium", "magnesium", "radium", "palladium", "silver", "lead", "krypton",
 "neon", "boron", "silicon", "iron", "chromium", "hydrogen"];
+
+var randomWord = words[Math.floor(words.length * Math.random())];
+console.log(randomWord);
+
+
+console.log(Word);
+
+
+var help = new Word("help");
+// help.callCheckItFunctionOnEach();
+// help.returnAString();
+console.log(help);
+
 
 
 module.exports = Word;
