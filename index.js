@@ -2,7 +2,6 @@
 var inquirer = require('inquirer');
 var Word = require("./Word.js");
 
-
 //empty array to meet the criteria of... An array of `new` Letter objects
 //representing the letters of the underlying word
 var lettersArr = [];
