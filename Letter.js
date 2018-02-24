@@ -9,7 +9,7 @@ function Letter(letter) {
     this.accurateGuess = false;
 
     this.toString = function(letter) {
-        // if (alphabetLetters.indexOf(letter) > -1) {
+        
         if(this.accurateGuess === true) {
             return this.letter;
 
