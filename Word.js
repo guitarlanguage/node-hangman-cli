@@ -14,20 +14,27 @@ var Word = function(word) {
         this.letterObjects.push(letter);
     }
 
+    this.counter = 0;
     this.returnAString = function() {
 
         var returnAString = "";
-        for (var i = 0; i < letterObjects.length; i++) {
-            returnAString += this.toString(letterObjects[i]);
+        for (var i = 0; i < this.letterObjects.length; i++) {
+            returnAString += this.letterObjects[i] + " ";
             console.log(returnAString);
         }
+
     };
     // A function that takes a character as an argument and calls the guess
     //function on each letter object (the second function defined in Letter.js
     this.callCheckItFunctionOnEach = function(character) {
-        for (var j = 0; j < letterObjects.length; j++) {
-            character.checkIt(letterObjects[j]);
+        var correct = false;
+        for (var j = 0; j < this.letterObjects.length; j++) {
+            if (this.letterObjects[j].checkIt(character) === true) {
+                correct = true;
+                this.counter++;
+            }
         }
+        return correct;
     };
 
 };
@@ -40,14 +47,15 @@ var words = ["carbon", "hydrogen", "helium", "gallium", "zinc", "argon", "tin",
 var randomWord = words[Math.floor(words.length * Math.random())];
 // console.log(randomWord);
 
-
-console.log(Word);
+//
+// console.log(Word);
 
 
 var help = new Word("help");
 // help.callCheckItFunctionOnEach();
 // help.returnAString();
-console.log(help);
+// console.log(help);
+help.callCheckItFunctionOnEach("help");
 
 
 
