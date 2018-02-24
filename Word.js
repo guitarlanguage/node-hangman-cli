@@ -38,7 +38,7 @@ var words = ["carbon", "hydrogen", "helium", "gallium", "zinc", "argon", "tin",
 "neon", "boron", "silicon", "iron", "chromium", "hydrogen"];
 
 var randomWord = words[Math.floor(words.length * Math.random())];
-console.log(randomWord);
+// console.log(randomWord);
 
 
 console.log(Word);
