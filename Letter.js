@@ -1,6 +1,6 @@
 // jshint esnext: true
-// var alphabet = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,
-// G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+var alphabetLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+ "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wrongGuesses = [];
 //the Letter Constructor
 function Letter(letter) {
@@ -10,7 +10,7 @@ function Letter(letter) {
     this.guessed = false;
 
     this.toString = function(letter) {
-
+        // if (alphabetLetters.indexOf(letter) > -1) {
         if(this.guessed === true) {
             return this.letter;
 
@@ -24,7 +24,7 @@ function Letter(letter) {
         if (this.letter === character) {
             this.guessed = true;
             return;
-            
+
         }   else {
                 console.log(`try a different letter`);
                 wrongGuesses.push(character);
@@ -32,11 +32,18 @@ function Letter(letter) {
         }
     };
 }
-//testing
+// testing
 // var j = new Letter("j");
+// console.log(j);
 // j.checkIt("j");
-// j.toString();
-// //
+//
+//
+// console.log(`__________`);
+// j.toString("j");
+// console.log(j);
+
+
+//
 // var l = new Letter(l);
 // l.checkIt("l");
 // l.toString();
