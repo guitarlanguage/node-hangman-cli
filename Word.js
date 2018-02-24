@@ -4,11 +4,10 @@
 var Letter = require("./Letter.js");
 
 var Word = function(word) {
-
-    this.word = word;
     //An array of `new` Letter objects representing the letters of the underlying word
-    // this.words will hold all of our word objects
     this.letters = [];
+    this.word = word;
+
     //put those word letters into the this.letters array
     for (var w = 0; w < letters.length; w++) {
         var letter = new Letter(word[w]);
@@ -27,4 +26,13 @@ var Word = function(word) {
 
 };
 
+var words = ["carbon", "hydrogen", "helium", "gallium", "zinc", "argon", "tin",
+"potassium", "sodium", "chlorine", "sulfur", "cobalt", "zirconium", "barium",
+"lithium", "magnesium", "radium", "palladium", "silver", "lead", "krypton",
+"neon", "boron", "silicon", "iron", "chromium", "hydrogen"];
+
+console.log(this.letters);
+
 console.log(Word);
+
+module.exports = Word;
