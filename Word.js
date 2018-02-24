@@ -15,6 +15,7 @@ var Word = function(word) {
     }
 
     this.counter = 0;
+    
     this.returnAString = function() {
 
         var returnAString = "";
