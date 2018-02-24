@@ -6,11 +6,11 @@ function Letter(letter) {
     //A string value to store the underlying character for the letter
     this.letter = letter;
     //A boolean value that stores whether that letter has been guessed yet
-    this.AccurateGuess = false;
+    this.accurateGuess = false;
 
     this.toString = function(letter) {
         // if (alphabetLetters.indexOf(letter) > -1) {
-        if(this.AccurateGuess === true) {
+        if(this.accurateGuess === true) {
             return this.letter;
 
         } else {
@@ -21,7 +21,7 @@ function Letter(letter) {
     //underlying character, updating the stored boolean value to true if it was guessed correctly
     this.checkIt = function(character) {
         if (this.letter === character) {
-            this.AccurateGuess = true;
+            this.accurateGuess = true;
             return;
 
         }   else {
