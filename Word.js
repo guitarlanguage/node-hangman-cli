@@ -22,7 +22,7 @@ var Word = function(word) {
             returnAString += this.word[i].toString() + " ";
 
         }
-        console.log(returnAString);
+        // console.log(returnAString);
         return returnAString;
     };
     // A function that takes a character as an argument and calls the guess
@@ -33,33 +33,11 @@ var Word = function(word) {
             this.lettersArr[j].checkIt(character);
 
         }
-        console.log(this.returnAString);
+        // console.log(this.returnAString);
         return this.returnAString;
     };
 
 
 };
-
-var words = ["carbon", "hydrogen", "helium", "gallium", "zinc", "argon", "tin",
-    "potassium", "sodium", "chlorine", "sulfur", "cobalt", "zirconium", "barium",
-    "lithium", "magnesium", "radium", "palladium", "silver", "lead", "krypton",
-    "neon", "boron", "silicon", "iron", "chromium", "hydrogen"
-];
-
-var randomWord = words[Math.floor(words.length * Math.random())];
-// console.log(randomWord);
-
-//
-// console.log(Word);
-
-
-var help = new Word("help");
-// help.callCheckItFunctionOnEach();
-help.returnAString();
-// console.log(help);
-
-// help.callCheckItFunctionOnEach("help");
-
-
 
 module.exports = Word;
