@@ -9,7 +9,7 @@ var Word = function(word) {
     this.word = word;
 
     //put those word letters into the this.letterObjects array
-    for (var wl = 0; wl < letterObjects.length; wl++) {
+    for (var wl = 0; wl < word.length; wl++) {
         var letter = new Letter(word[wl]);
         this.letterObjects.push(letter);
     }
@@ -42,6 +42,5 @@ var words = ["carbon", "hydrogen", "helium", "gallium", "zinc", "argon", "tin",
 "lithium", "magnesium", "radium", "palladium", "silver", "lead", "krypton",
 "neon", "boron", "silicon", "iron", "chromium", "hydrogen"];
 
-Word();
 
 module.exports = Word;
