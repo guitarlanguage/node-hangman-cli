@@ -1,17 +1,16 @@
 // jshint esnext: true
-var alphabetLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
- "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
 var wrongGuesses = [];
 //the Letter Constructor
 function Letter(letter) {
     //A string value to store the underlying character for the letter
     this.letter = letter;
     //A boolean value that stores whether that letter has been guessed yet
-    this.guessed = false;
+    this.AccurateGuess = false;
 
     this.toString = function(letter) {
         // if (alphabetLetters.indexOf(letter) > -1) {
-        if(this.guessed === true) {
+        if(this.AccurateGuess === true) {
             return this.letter;
 
         } else {
@@ -22,11 +21,10 @@ function Letter(letter) {
     //underlying character, updating the stored boolean value to true if it was guessed correctly
     this.checkIt = function(character) {
         if (this.letter === character) {
-            this.guessed = true;
+            this.AccurateGuess = true;
             return;
 
         }   else {
-                console.log(`try a different letter`);
                 wrongGuesses.push(character);
                 console.log(wrongGuesses);
         }
