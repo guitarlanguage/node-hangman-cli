@@ -7,11 +7,12 @@ function Letter(letter) {
     this.letter = letter;
     //A boolean value that stores whether that letter has been guessed yet
     this.accurateGuess = false;
+    //if the letter has been guessed
+    this.produceLetterOrUnderscore = function() {
 
-    this.toString = function(letter) {
-        
-        if(this.accurateGuess === true) {
-            return this.letter;
+        if (this.accurateGuess === true) {
+            return letter;
+            console.log(letter);
 
         } else {
             console.log(`_`);
@@ -19,32 +20,28 @@ function Letter(letter) {
     };
     //A function that takes a character as an argument and checks it against the
     //underlying character, updating the stored boolean value to true if it was guessed correctly
-    this.checkIt = function(character) {
-        if (this.letter === character) {
+    this.checkItAgainstGameLetter = function(character) {
+        if (character === this.letter) {
             this.accurateGuess = true;
             return;
 
-        }   else {
-                wrongGuesses.push(character);
-                console.log(wrongGuesses);
+        } else {
+            wrongGuesses.push(character);
+            // console.log(wrongGuesses);
         }
     };
 }
-// testing
-// var j = new Letter("j");
-// console.log(j);
-// j.checkIt("j");
-//
-//
-// console.log(`__________`);
-// j.toString("j");
-// console.log(j);
+
+var j = new Letter("j");
+j.checkItAgainstGameLetter('j');
+console.log(j.produceLetterOrUnderscore());
 
 
-//
-// var l = new Letter(l);
-// l.checkIt("l");
-// l.toString();
+console.log(`---------`);
+
+
+console.log(j);
+
 
 //export the module
 module.exports = Letter;
