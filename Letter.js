@@ -1,8 +1,8 @@
 // jshint esnext: true
 
-var wrongGuesses = [];
+// var wrongGuesses = [];
 //the Letter Constructor
-function Letter(letter) {
+var Letter = function (letter) {
     //A string value to store the underlying character for the letter
     this.letter = letter;
     //A boolean value that stores whether that letter has been guessed yet
@@ -11,8 +11,9 @@ function Letter(letter) {
     this.produceLetterOrUnderscore = function() {
 
         if (this.accurateGuess === true) {
+            // console.log(letter);
             return letter;
-            console.log(letter);
+
 
         } else {
             console.log(`_`);
@@ -23,24 +24,24 @@ function Letter(letter) {
     this.checkItAgainstGameLetter = function(character) {
         if (character === this.letter) {
             this.accurateGuess = true;
-            return;
+            return this.accurateGuess;
 
         } else {
-            wrongGuesses.push(character);
+            return;
             // console.log(wrongGuesses);
         }
     };
 }
 
-var j = new Letter("j");
-j.checkItAgainstGameLetter('j');
-console.log(j.produceLetterOrUnderscore());
+// var j = new Letter('j');
+// j.checkItAgainstGameLetter('j');
+// console.log(j.produceLetterOrUnderscore());
+//
+//
+// console.log(`---------`);
 
 
-console.log(`---------`);
-
-
-console.log(j);
+// console.log(j);
 
 
 //export the module
